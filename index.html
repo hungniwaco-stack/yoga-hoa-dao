@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Hoa Đào | Đánh thức năng lượng, cân bằng thân tâm</title>
+    <meta name="description" content="Phòng tập Yoga Hoa Đào tại Phan Rang, Khánh Hòa. Nơi thư giãn, tĩnh tâm và rèn luyện cơ thể với phong cách hiện đại.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Hệ thống màu Soft UI - Hoa Đào */
+            --primary: #EC4899;        /* Hồng đậm */
+            --primary-dark: #BE185D;   /* Hồng tối hơn cho hover */
+            --secondary: #F9A8D4;      /* Hồng nhạt */
+            --cta: #8B5CF6;            /* Tím làm điểm nhấn */
+            --cta-hover: #7C3AED;      /* Tím đậm hơn */
+            --bg: #FDF2F8;             /* Trắng hồng nhẹ */
+            --surface: #FFFFFF;        /* Trắng tinh */
+            --text-dark: #831843;      /* Đỏ tía đậm (cho text chính & heading) */
+            --text-muted: #9D174D;     /* Đỏ tía nhạt (cho mô tả) */
+            --line: rgba(236, 72, 153, 0.15); /* Viền hồng rất nhẹ */
+            --shadow-sm: 0 4px 12px rgba(236, 72, 153, 0.05);
+            --shadow-md: 0 12px 32px rgba(236, 72, 153, 0.08);
+            --shadow-lg: 0 24px 64px rgba(236, 72, 153, 0.12);
+            --radius: 16px;
+            --radius-sm: 8px;
+            
+            /* Typography */
+            --font-heading: 'Lora', serif;
+            --font-body: 'Raleway', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            border-radius: var(--radius-sm);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(253, 242, 248, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 48px;
+            padding: 0 28px;
+            border: none;
+            border-radius: 999px;
+            background: var(--primary);
+            color: white;
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: var(--primary-dark);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn.secondary {
+            background: var(--surface);
+            color: var(--primary);
+            border: 1px solid var(--line);
+            box-shadow: none;
+        }
+
+        .btn.secondary:hover {
+            border-color: var(--primary);
+            background: var(--bg);
+        }
+
+        .btn.cta {
+            background: var(--cta);
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+        }
+
+        .btn.cta:hover {
+            background: var(--cta-hover);
+            box-shadow: 0 12px 32px rgba(139, 92, 246, 0.35);
+        }
+
+        /* ---------------- TYPOGRAPHY ---------------- */
+        h1, h2, h3, h4 {
+            margin-top: 0;
+            font-family: var(--font-heading);
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(32px, 4.5vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 22px;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .section-kicker {
+            display: inline-block;
+            margin-bottom: 16px;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .lead {
+            font-size: clamp(16px, 2vw, 18px);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        .quote-block {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05));
+            border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 32px 0;
+            font-size: 17px;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-family: var(--font-heading);
+            font-style: italic;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-light {
+            background: var(--surface);
+        }
+
+        /* ---------------- HERO ---------------- */
+        .hero {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg) 0%, #FFFFFF 100%);
+        }
+
+        .hero::before, .hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            filter: blur(80px);
+        }
+
+        .hero::before {
+            top: -10%;
+            right: -5%;
+            width: 500px;
+            height: 500px;
+            background: rgba(249, 168, 212, 0.4);
+        }
+
+        .hero::after {
+            bottom: -10%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(139, 92, 246, 0.15);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            max-width: 540px;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ---------------- BENEFITS & JOURNEY ---------------- */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            background: var(--surface);
+            padding: 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary);
+            color: var(--text-dark);
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 50%;
+        }
+
+        /* ---------------- POSES ---------------- */
+        .pose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pose-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--line);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pose-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pose-img {
+            height: 200px;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+
+        .pose-content {
+            padding: 32px;
+            flex-grow: 1;
+        }
+
+        .pose-content ul {
+            padding-left: 20px;
+            color: var(--text-muted);
+            margin: 16px 0 0 0;
+        }
+
+        .pose-content li {
+            margin-bottom: 8px;
+        }
+
+        /* ---------------- SCHEDULE ---------------- */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .schedule-card {
+            background: var(--bg);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--line);
+        }
+
+        .schedule-card h3 {
+            color: var(--primary);
+            border-bottom: 2px dashed var(--line);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            font-family: var(--font-heading);
+            font-size: 24px;
+        }
+
+        .schedule-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .schedule-card li {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--line);
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .schedule-card li:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-note {
+            margin-top: 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ---------------- GALLERY ---------------- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 250px;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* ---------------- CONTACT & CTA ---------------- */
+        .contact-section {
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+        }
+
+        .contact-box {
+            display: block;
+            background: var(--surface);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--line);
+        }
+
+        .contact-info {
+            padding: 60px;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .contact-info h2, .contact-info p, .contact-info h3 {
+            color: white;
+        }
+
+        .contact-info .section-kicker {
+            color: var(--secondary);
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            min-width: 300px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-item-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 992px) {
+            .hero-container, .journey-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content {
+                max-width: 100%;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            section {
+                padding: 60px 0;
+            }
+            .contact-info {
+                padding: 40px 24px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav">
+            <a href="#top" class="brand">
+                <img src="Anh/Logo.jpg" alt="Logo Yoga Hoa Đào" style="height: 40px; width: auto; border-radius: 50%;">
+                <span>Yoga Hoa Đào</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#triet-ly">Triết lý</a>
+                <a href="#tu-the">Kiến thức</a>
+                <a href="#lich-tap">Lịch tập</a>
+                <a href="#thu-vien">Không gian</a>
+            </nav>
+            <a href="#lien-he" class="btn">Nhận tư vấn</a>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="section-kicker">Phòng tập Yoga tĩnh tâm tại Phan Rang</span>
+                    <h1>Thân ở đâu, tâm ở đó.<br>Nhờ hơi thở dẫn lối.</h1>
+                    <p class="lead">Đánh thức năng lượng, cân bằng thân tâm. Sự hợp nhất không phải là một đích đến cao siêu, mà là khoảnh khắc bạn nhận ra: Mình đang thở và mình đang ở đây, trọn vẹn.</p>
+                    <div class="hero-actions">
+                        <a href="#lich-tap" class="btn cta">Xem lịch tập</a>
+                        <a href="#lien-he" class="btn secondary">Đăng ký ngay</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="Anh/01.jpg" alt="Người phụ nữ tập Yoga thư giãn">
+                </div>
+            </div>
+        </section>
+
+        <!-- TRIẾT LÝ & LỢI ÍCH -->
+        <section id="triet-ly" class="section-light">
+            <div class="container">
+                <div class="journey-grid">
+                    <div class="hero-image">
+                        <img src="Anh/02.jpg" alt="Lớp học Yoga thư giãn">
+                    </div>
+                    <div>
+                        <span class="section-kicker">Trải nghiệm một buổi tập tại Yoga Hoa Đào</span>
+                        <h2>Chỉ khi Thân - Tâm - Trí gặp nhau, đó mới là Yoga.</h2>
+                        
+                        <div class="quote-block">
+                            "Không ồn ào, không vội vàng, chỉ có sự tập trung trong từng chuyển động. Mỗi học viên được hướng dẫn chi tiết, điều chỉnh từng tư thế để tập đúng – và cảm nhận rõ sự thay đổi của cơ thể. Ở đây, yoga không phải là áp lực phải làm tốt…mà là hành trình học cách lắng nghe chính mình."
+                        </div>
+                        
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-number">01</div>
+                                <div>
+                                    <h3>Namaste - Sự kết nối</h3>
+                                    <p style="margin:0; color:var(--text-muted)">Quay về với sự khiêm nhường. Biết ơn cơ thể và hành trình của mình đang đi. Tôn trọng hành trình của người khác.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">02</div>
+                                <div>
+                                    <h3>Yoga dạy ta kiên nhẫn</h3>
+                                    <p style="margin:0; color:var(--text-muted)">Học cách "ở lại" với chính mình, lặng lẽ quan sát từng thớ cơ đang mỏi nhừ và cả những xao động không tên trong tâm trí.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TƯ THẾ & KIẾN THỨC -->
+        <section id="tu-the">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <span class="section-kicker">Góc kiến thức</span>
+                    <h2>Khám phá lợi ích qua từng tư thế</h2>
+                    <p class="lead" style="margin: 0 auto;">Yoga không chỉ là về tư thế, mà còn là về sự chỉnh sửa ý thức giúp năng lượng của bạn chảy tự do.</p>
+                </div>
+
+                <div class="pose-grid">
+                    <div class="pose-card">
+                        <div class="pose-img" style="padding: 0;">
+                            <img src="Anh/06.jpg" alt="Tư thế bánh xe" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="pose-content">
+                            <h3>Tư thế Bánh xe</h3>
+                            <p>Mở rộng trái tim, củng cố cột sống và tự tin vươn lên.</p>
+                            <ul>
+                                <li>Tăng cường cột sống, vai, tay & chân.</li>
+                                <li>Kích hoạt glutes và cốt lõi.</li>
+                                <li>Tăng cường năng lượng & mở rộng phổi.</li>
+                                <li>Tập trung kéo dài cột sống, keo gắn kết và cánh tay chủ động.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pose-card">
+                        <div class="pose-img" style="padding: 0;">
+                            <img src="Anh/07.jpg" alt="Camatkarasana" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="pose-content">
+                            <h3>Camatkarasana</h3>
+                            <p>Làm chủ những điều hoang dã. Sự chia nhỏ giải phẫu tích cực thu hút các cơ để có một phần lưng an toàn và mở rộng.</p>
+                            <ul>
+                                <li><strong>The Foundation:</strong> Nhấn chắc vào tay và ngón chân tạo đà.</li>
+                                <li><strong>The Core & Glutes:</strong> Thu hút chuỗi sau để đưa hông lên cao.</li>
+                                <li><strong>Người mở lòng:</strong> Xoay vai bên ngoài và nâng phần xương.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pose-card">
+                        <div class="pose-img" style="padding: 0;">
+                            <img src="Anh/08.jpg" alt="Puppy Pose" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="pose-content">
+                            <h3>Puppy Pose (Uttana)</h3>
+                            <p>Làm dịu tâm trí, kéo dài cơ thể và giảm những mệt mỏi thường ngày.</p>
+                            <ul>
+                                <li>Kéo giãn cột sống, vai & ngực.</li>
+                                <li>Giảm căng thẳng lưng trên.</li>
+                                <li>Giúp giảm căng cứng cổ vai gáy.</li>
+                                <li>Cải thiện tư thế & sự linh hoạt.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LỊCH TẬP -->
+        <section id="lich-tap" class="section-light">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="section-kicker">Cùng đồng hành</span>
+                    <h2>Yoga Hoa Đào – Lịch tập mỗi ngày</h2>
+                </div>
+                
+                <div class="schedule-grid">
+                    <div class="schedule-card">
+                        <h3>☀️ Buổi Sáng</h3>
+                        <ul>
+                            <li><span>Lớp cộng đồng</span> <span>5h00 – 6h00</span></li>
+                            <li><span>Lớp cộng đồng</span> <span>6h00 – 7h00</span></li>
+                            <li><span>Lớp cộng đồng</span> <span>7h20 – 8h20</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="schedule-card">
+                        <h3>🌙 Buổi Chiều & Tối</h3>
+                        <ul>
+                            <li><span>Lớp người lớn tuổi</span> <span>15h30 – 16h30</span></li>
+                            <li><span>Lớp cộng đồng</span> <span>17h30 – 18h30</span></li>
+                            <li><span>Lớp cộng đồng</span> <span>18h30 – 19h30</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="schedule-note">"Không gian yên tĩnh, mỗi buổi tập đều được hướng dẫn tận tình và sát sao."</p>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="thu-vien">
+            <div class="container">
+                <span class="section-kicker">Không gian tập luyện</span>
+                <h2>Góc an yên tại Yoga Hoa Đào</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item large">
+                        <img src="Anh/03.jpg" alt="Không gian phòng tập 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/04.jpg" alt="Lớp học Yoga 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/05.jpg" alt="Lớp học Yoga 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/11.jpg" alt="Lớp học Yoga 3">
+                    </div>
+                    <div class="gallery-item large">
+                        <img src="Anh/12.jpg" alt="Không gian phòng tập 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/13.jpg" alt="Lớp học Yoga 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/14.jpg" alt="Lớp học Yoga 5">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/15.jpg" alt="Lớp học Yoga 6">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Anh/09.jpg" alt="Lớp học Yoga 7">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="lien-he" class="contact-section">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <div>
+                            <span class="section-kicker">Liên hệ</span>
+                            <h2>Sẵn sàng bắt đầu<br>hành trình của bạn?</h2>
+                            <p style="max-width: 400px;">Hãy liên hệ với Yoga Hoa Đào để được tư vấn lịch tập phù hợp nhất với mục tiêu của bạn.</p>
+                        </div>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📍</div>
+                                <div>
+                                    <h3 style="font-size: 18px; margin-bottom: 4px;">Địa chỉ</h3>
+                                    <p style="margin: 0; font-size: 15px; opacity: 0.9;">Số 54, Ngô Gia Khảm, phường Phan Rang, tỉnh Khánh Hòa</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📞</div>
+                                <div>
+                                    <h3 style="font-size: 18px; margin-bottom: 4px;">Điện thoại / Zalo</h3>
+                                    <p style="margin: 0; font-size: 15px; opacity: 0.9;">0985 787 579 (Gặp Dần)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h3>🌸 Yoga Hoa Đào</h3>
+            <p style="margin: 0; opacity: 0.8;">Đánh thức năng lượng, cân bằng thân tâm.</p>
+            <p style="margin: 16px 0 0; font-size: 13px; opacity: 0.5;">&copy; 2026 Yoga Hoa Đào. Designed with UI/UX Pro Max.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
