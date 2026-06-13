@@ -274,15 +274,17 @@
 
         .hero-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr;
+            gap: 40px;
             align-items: center;
             position: relative;
             z-index: 10;
+            text-align: center;
         }
 
         .hero-content {
-            max-width: 540px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero-image {
@@ -290,7 +292,7 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
             overflow: hidden;
-            aspect-ratio: 4/5;
+            /* removed aspect-ratio to let banner display fully */
         }
         .hero-image img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -609,7 +611,7 @@
             .quote-block { padding: 24px; margin: 24px 0; font-size: 16px; }
 
             /* Hero Optimization */
-            .hero-image { aspect-ratio: 4/3; }
+            .hero-image { aspect-ratio: auto; }
             .hero-actions { flex-direction: column; width: 100%; }
             .hero-actions .btn { width: 100%; justify-content: center; }
 
@@ -675,7 +677,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="Anh/01.jpg" alt="Người phụ nữ tập Yoga thư giãn">
+                    <img src="Anh/Banner.png" alt="Banner Phòng tập Yoga Hoa Đào">
                 </div>
             </div>
         </section>
